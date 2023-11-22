@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <title>Question Answering DistilBERT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Question Answering DistilBERT</h1>
+        <p> Este chatbot foi desenvolvido utilizando a técnica de ajuste fino (fine tuning) de um Modelo de Linguagem Largo (LLM) para realizar a tarefa de Question Answering (QA). O projeto foi elaborado como parte do Trabalho de Conclusão de Curso II (TCC II) na Universidade do Estado da Bahia (UNEB) pelo discente <span class="nome">Lázaro Queiroz da Silva</span> sob a orientação da  <span class="nome">Prof.Dr.Ana Patrícia F. Magalhães</span>.</p>
+    
+        <div class="context-section">
+            <label for="context">Contexto:</label>
+            <textarea id="context" rows="10"></textarea>
+            <div class="error-message" id="context-error"></div>
+            <div class="success-message" id="context-success"></div>
+            <div class="success-message" id="user-input-success"></div>
+            <button id="set-context">Contexto</button>
+        </div>
+        <div class="chat-section">
+            <label for="user-input">Faça sua pergunta:</label>
+            <input type="text" id="user-input">
+            <div class="error-message" id="user-input-error"></div>
+            <div class="success-message" id="send-question-success"></div>
+            <div class="success-message" id="user-input-success"></div>
+            <button id="send-question">Enviar</button>
+            <div id="chat-messages"></div>
+        </div>
+        <div id="status-message"></div>
+        <a href="#" id="instructions-button">Instruções</a>
+        <div id="instructions-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="close-modal">&times;</span>
+                <h2>Instruções</h2>
+                <ul>
+                    <li>Inicialmente, defina um contexto relacionado a algum tema, como um texto, trecho de livro ou artigo.</li>
+                    <li>Para enviar o contexto, clique no botão "Contexto" logo abaixo da caixa de texto.</li>
+                    <li>Após o envio do contexto, faça uma pergunta relacionada ao contexto enviado, clique no botão "Enviar" e aguarde até que o modelo retorne uma resposta.</li>
+                </ul>
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
