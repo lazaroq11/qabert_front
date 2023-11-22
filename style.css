@@ -1,38 +1,43 @@
-/* style.css */
 
 body {
     font-family: Roboto;
 }
 
 .container {
-    width: 600px;
-    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
-h1{
+h1 {
     font-style: italic;
 }
-.context-section, .chat-section {
+
+.context-section,
+.chat-section {
     margin-bottom: 20px;
 }
 
-.nome{
+.nome {
     font-style: italic;
 }
+
 label {
     display: block;
     margin-bottom: 5px;
     margin-left: 10px;
 }
 
-textarea, input[type="text"] {
+textarea,
+input[type="text"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius:29px;
+    border-radius: 29px;
 }
 
-textarea:focus, input:focus{
+textarea:focus,
+input:focus {
     box-shadow: 0 0 0 0;
     outline: 0;
 }
@@ -47,15 +52,13 @@ button {
     border-radius: 20px;
 }
 
-button:hover{
+button:hover {
     transition: all ease 1s;
-    
     background-color: black;
 }
 
 #chat-messages {
     margin-top: 10px;
-    
     padding: 10px;
 }
 
@@ -66,35 +69,32 @@ button:hover{
 #status-message {
     margin-top: 10px;
     padding: 10px;
-   
     color: #007bff;
     font-weight: bold;
 }
 
-
-
 .success {
-    color: #28a745; 
-    transition: opacity 0.5s ease-in-out; 
+    color: #28a745;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .success:empty {
-    opacity: 0; 
+    opacity: 0;
 }
 
-/* Adicione estas regras no seu arquivo CSS */
-a{
+
+a {
     position: fixed;
     bottom: 20px;
-    right: 120px;
+    right: 20px; 
     padding: 10px;
     background-color: #007bff;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     cursor: pointer;
-    
 }
+
 .modal {
     display: none;
     position: fixed;
@@ -111,7 +111,7 @@ a{
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    border-radius:20px
+    border-radius: 20px;
 }
 
 .close {
@@ -120,4 +120,32 @@ a{
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+}
+
+
+@media only screen and (max-width: 576px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    #chat-messages {
+        padding: 5px;
+    }
+
+    a {
+        right: 10px;
+    }
+}
+
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    a {
+        right: 30px;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    a {
+        right: 40px;
+    }
 }
